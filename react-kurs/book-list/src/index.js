@@ -4,30 +4,35 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css'
 
+const title = "Intersting facts For Curious Minds";
+const author = "Jordan More"
+const img = "./images/book1.jpg"
+
+
 const Booklist = () => {
   return(
     <section className='booklist'>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
-      <Book></Book>
+      <Book author={author} title={title} img={img}></Book>
+      <Book author={author} title={title} img={img}></Book>
     </section>
   )
 }
 
-const Book = () =>{
+
+
+const Book = (props) =>{
   return <article className='book'>
-    <Image></Image>
-    <Title></Title>
-    <Author></Author>
+    <img src={props.img}/>
+    <h2>{props.title}</h2>
+    <h4>{props.author}</h4>
+    <p></p>
   </article>
 }
 
-const Image = () => <img src='./images/book1.jpg'></img>
-const Title = () => <h2>Daisy Jones & The Six</h2>
-const Author = () => {
-  return <h4>Taylor Jenkins Reid</h4>
-}
+
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
