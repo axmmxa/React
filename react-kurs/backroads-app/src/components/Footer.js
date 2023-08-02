@@ -1,10 +1,20 @@
 import React from 'react'
 
+import { pageLinks } from '../data'
+
 const Footer = () => {
+ 
   return (
-    
     <footer className="section footer">
       <ul className="footer-links">
+        {pageLinks.map((link)=>{
+          <li>
+            <a href="#home" className="footer-link">home</a>
+          </li>
+
+
+
+        })}
         <li>
           <a href="#home" className="footer-link">home</a>
         </li>
@@ -40,7 +50,6 @@ const Footer = () => {
         <span id="date"></span> all rights reserved
       </p>
     </footer>
-    
   )
 }
 

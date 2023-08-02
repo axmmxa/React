@@ -13,8 +13,9 @@ function App() {
     <Navbar></Navbar>
     <Hero></Hero>
     <About></About>
+
     <Services></Services>
-    <About></About>
+   <Tours></Tours>
     <Footer></Footer>
     </>
   );
